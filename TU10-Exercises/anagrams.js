@@ -11,11 +11,7 @@ try {
 
   const solution = anagrams(input);
 
-  const now = new Date();
-  now.setDate(now.getDate() + 1);
-
-  document.cookie =
-    'anagrams=' + solution.join() + ';expires=' + now.toUTCString();
+  publishSolution(solution);
 } catch (error) {
   console.log(error);
 }
@@ -33,4 +29,12 @@ function anagrams(list) {
   });
 
   return Array.from(anagramsMap.values());
+}
+
+function publishSolution(solution) {
+  const now = new Date();
+  now.setDate(now.getDate() + 1);
+
+  document.cookie =
+    'anagrams=' + solution.join() + ';expires=' + now.toUTCString();
 }
