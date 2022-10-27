@@ -36,11 +36,26 @@ function suma(...listaNumeros) {
 // const num2 = 2;
 // const arrayNums = [2, 2, 2, 2, 2];
 // const arrayNums2 = [3, 3, 3];
-// console.log(suma(...arrayNums, ...arrayNums2));
+// console.log(...arrayNums, ...arrayNums2);
+// const resultado = suma(...arrayNums, ...arrayNums2);
+// console.log(resultado);
 
-function sum2(a, b, c) {
-  return a + b + c;
-}
+// function sum2(a, b, c) {
+//   return a + b + c;
+// }
 
-const listaNumeros = [1, 2, 3, 4, 5];
-console.log(sum2(...listaNumeros));
+// const listaNumeros = [1, 2, 3, 4, 5];
+// console.log(sum2(...listaNumeros));
+
+const ciudades = ['Gandia', 'Oliva', 'Tavernes'];
+// const ciudadesNew = ciudades;
+// ciudadesNew.push('Simat');
+// console.log(ciudadesNew);
+// console.log(ciudades);
+const ciudadesNew = [...ciudades];
+console.log(ciudadesNew.length);
+
+ciudadesNew.push('Simat');
+
+console.log(ciudades);
+console.log(ciudadesNew);
