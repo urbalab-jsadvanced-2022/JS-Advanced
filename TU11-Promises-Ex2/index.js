@@ -9,7 +9,7 @@ function delay(ms) {
 
 // Crear SPAN
 const span = document.createElement('span');
-span.textContent = 'Loading';
+span.textContent = '0';
 document.body.append(span);
 
 delay(3000)
