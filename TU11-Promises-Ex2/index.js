@@ -12,10 +12,27 @@ const span = document.createElement('span');
 span.textContent = '0';
 document.body.append(span);
 
-delay(3000)
+delay(1000)
   .then(() => {
-    span.textContent = 'Completed';
+    span.textContent = '1';
+    return delay(1000);
   })
-  .catch(() => {
-    span.textContent = 'Error';
+  .then(() => {
+    span.textContent = '2';
+    return delay(1000);
+  })
+  .then(() => {
+    span.textContent = '3';
+    return delay(1000);
+  })
+  .then(() => {
+    span.textContent = '4';
+    return delay(1000);
+  })
+  .then(() => {
+    span.textContent = '5';
   });
+
+window.addEventListener('unhandledrejection', (error) => {
+  span.textContent = error.reason;
+});
